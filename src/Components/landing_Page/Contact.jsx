@@ -29,14 +29,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <section id="contact" className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center max-w-2xl mx-auto">
-        <p className="text-xs font-semibold text-[#a9ad8f] tracking-widest mb-2 uppercase">
-          CONTACT US
+        <p className="text-xl font-semibold text-[#a9ad8f] tracking-widest mb-2 uppercase">
+         Let’s Connect
         </p>
-        <h2 className="text-3xl font-extrabold mb-4">Have a Project?</h2>
         <p className="text-gray-500 text-center">
-          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+          Open to new challenges, collaborations, and conversations.
         </p>
       </div>
 
@@ -78,7 +77,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className="bg-[#a9ad8f] text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-[#bcc775] text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-500 cursor-pointer"
           >
             Send Message
           </button>

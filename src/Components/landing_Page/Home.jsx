@@ -33,7 +33,7 @@ const Home = () => {
           <div className="flex flex-wrap gap-4">
             <button
              onClick={() => window.location.href = "#contact"}
-             className="bg-[#b0b28a] text-white font-semibold rounded-md px-4 py-2 shadow-[0_10px_15px_-3px_rgba(176,178,138,0.3)]">
+             className="bg-[#b0b28a] text-white font-semibold rounded-md px-4 py-2 shadow-[0_10px_15px_-3px_rgba(176,178,138,0.3)] cursor-pointer">
               Hire me
             </button>
             <a 

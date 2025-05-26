@@ -1,11 +1,13 @@
 import React from "react";
-import img from "../../assets/passwordgen.png"
+import img1 from "../../assets/passwordgen.png"
+import img2 from '../../assets/Emp.png'
+import img3 from '../../assets/Todo.png'
 
 const projects = [
   {
     title: "Password-Generator",
     description: "A Password-Generator website built with React and Tailwind CSS showcasing my skills and projects.",
-    image: img,
+    image: img1,
     tech: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/krishnapal81/Password--Generator",
     demo: "https://passwordcreator-iota.vercel.app/",
@@ -13,19 +15,43 @@ const projects = [
   {
     title: "Employee Task Assigner",
     description: "A task management app with CRUD features, real-time notifications and user authentication.",
-    image: "https://source.unsplash.com/600x400/?app,task",
-    tech: ["React", "Node.js", "MongoDB","Tailwind CSS"],
+    image: img2,
+    tech: ["React", "Node.js", "MongoDB","Tailwind CSS","Express.js"],
     github: "https://github.com/krishnapal81/EmployeeTaskAssigner",
     demo: "https://taskmanager.com",
   },
   {
-    title: "E-commerce Store",
-    description: "An e-commerce platform with product listing, shopping cart, and payment gateway integration.",
-    image: "https://source.unsplash.com/600x400/?ecommerce,store",
-    tech: ["React", "Redux", "Stripe"],
-    github: "https://github.com/yourusername/ecommerce-store",
-    demo: "https://ecommercestore.com",
+    title: "ToDo App",
+    description: "A simple and intuitive ToDo app that allows users to add, edit, delete, and mark tasks as complete. Built using React, it helps manage daily tasks efficiently with a clean and responsive user interface",
+    image: img3,
+    tech: ["Html", "CSS", "Javascript","React"],
+    github: "https://github.com/krishnapal81/TodoApp",
+    demo: "https://todo-app-tau-lovat-91.vercel.app/",
   },
+  //   {
+  //   title: "ToDo App",
+  //   description: "A simple and intuitive ToDo app that allows users to add, edit, delete, and mark tasks as complete. Built using React, it helps manage daily tasks efficiently with a clean and responsive user interface",
+  //   image: img3,
+  //   tech: ["React", "Redux", "Stripe"],
+  //   github: "https://github.com/krishnapal81/TodoApp",
+  //   demo: "https://todo-app-tau-lovat-91.vercel.app/",
+  // },
+  //   {
+  //   title: "ToDo App",
+  //   description: "A simple and intuitive ToDo app that allows users to add, edit, delete, and mark tasks as complete. Built using React, it helps manage daily tasks efficiently with a clean and responsive user interface",
+  //   image: img3,
+  //   tech: ["React", "Redux", "Stripe"],
+  //   github: "https://github.com/krishnapal81/TodoApp",
+  //   demo: "https://todo-app-tau-lovat-91.vercel.app/",
+  // },
+  //   {
+  //   title: "ToDo App",
+  //   description: "A simple and intuitive ToDo app that allows users to add, edit, delete, and mark tasks as complete. Built using React, it helps manage daily tasks efficiently with a clean and responsive user interface",
+  //   image: img3,
+  //   tech: ["React", "Redux", "Stripe"],
+  //   github: "https://github.com/krishnapal81/TodoApp",
+  //   demo: "https://todo-app-tau-lovat-91.vercel.app/",
+  // },
 ];
 
 const ProjectCard = ({ project }) => (

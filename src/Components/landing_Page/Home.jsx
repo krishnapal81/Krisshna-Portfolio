@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-16 lg:px-24 bg-white font-['Poppins']"
+      className="min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-16 lg:px-24 bg-white font-['Poppins'] mt-18"
     >
       {/* Left Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-6 py-12">

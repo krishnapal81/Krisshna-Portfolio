@@ -9,6 +9,7 @@ import Skills from './Components/landing_Page/Skills'
 import Projects from './Components/landing_Page/Projects'
 import Contact from './Components/landing_Page/Contact'
 import Journey from './Components/landing_Page/Journey'
+import Footer from './Components/landing_Page/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
     <Journey/>
     <Projects/>
     <Contact/>
+    <Footer/>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Journey = () => {
   const experience = [
@@ -15,7 +15,7 @@ const Journey = () => {
         "Collaborated with the product team to enhance UI/UX, ensuring consistent branding and accessibility.",
         "Optimized component performance and ensured cross-browser compatibility for a seamless user experience.",
         "Improved website speed and made sure it worked well on all browsers and devices.",
-        "Fixed bugs and added new features to make the application more user-friendly."
+        "Fixed bugs and added new features to make the application more user-friendly.",
       ],
     },
     {
@@ -56,16 +56,25 @@ const Journey = () => {
   const backendExperiences = experience.filter((exp) => exp.type === "backend");
 
   return (
-    <div id="learning-work" className="py-12 px-6 md:px-20 bg-gray-100">
-      <h2 className="text-4xl font-bold text-center text-blue-800 mb-10">
+    <section
+      id="learning-work"
+      className="py-16 px-6 md:px-20 bg-gradient-to-br from-blue-50 to-green-50 min-h-screen"
+    >
+      <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-16 tracking-wide drop-shadow-lg">
         📘 Chapters of My Career
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
         {/* Frontend Experience */}
         <div>
-          <h3 className="text-2xl font-semibold text-blue-600 mb-4">Frontend</h3>
-          <ul className="space-y-6">
+          <h3 className="text-3xl font-bold text-blue-700 mb-8 flex items-center gap-3">
+            <span
+              aria-hidden="true"
+              className="inline-block w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full animate-pulse"
+            />
+            Frontend
+          </h3>
+          <ul className="space-y-8">
             {frontendExperiences.map((exp, index) => {
               const start = new Date(exp.startDate).toLocaleDateString("en-US", {
                 month: "short",
@@ -79,18 +88,24 @@ const Journey = () => {
                   });
               const duration = calculateDuration(exp.startDate, exp.endDate);
               return (
-                <li key={index} className="bg-white p-4 rounded-lg border-l-4 border-blue-500" style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset" }}>
-                    
-                  <h4 className="text-lg font-bold">{exp.role}</h4>
-                  <p className="text-gray-700">{exp.company}</p>
-                  <p className="text-sm text-gray-500">{`${start} – ${end} (${duration})`}</p>
+                <li
+                  key={index}
+                  className="relative bg-white rounded-xl p-6 border-l-8 border-blue-500 shadow-lg transition-transform transform hover:scale-[1.03] hover:shadow-xl cursor-pointer"
+                  style={{
+                    boxShadow:
+                      "0 10px 15px rgba(59, 130, 246, 0.2), inset 0 0 10px rgba(59, 130, 246, 0.1)",
+                  }}
+                >
+                  <h4 className="text-xl font-semibold text-blue-800">{exp.role}</h4>
+                  <p className="text-gray-700 font-medium">{exp.company}</p>
+                  <p className="text-sm text-gray-500 mb-2">{`${start} – ${end} (${duration})`}</p>
                   {exp.current && (
-                    <span className="text-sm text-green-600 font-medium">
-                      Currently working here
+                    <span className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md select-none">
+                      Currently working
                     </span>
                   )}
                   {Array.isArray(exp.description) && (
-                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-700">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-3 text-sm">
                       {exp.description.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}
@@ -104,8 +119,14 @@ const Journey = () => {
 
         {/* Backend / Big Data Experience */}
         <div>
-          <h3 className="text-2xl font-semibold text-green-600 mb-4">Google Cloud Platform</h3>
-          <ul className="space-y-6">
+          <h3 className="text-3xl font-bold text-green-700 mb-8 flex items-center gap-3">
+            <span
+              aria-hidden="true"
+              className="inline-block w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full animate-pulse"
+            />
+            Google Cloud Platform
+          </h3>
+          <ul className="space-y-8">
             {backendExperiences.map((exp, index) => {
               const start = new Date(exp.startDate).toLocaleDateString("en-US", {
                 month: "short",
@@ -119,17 +140,24 @@ const Journey = () => {
                   });
               const duration = calculateDuration(exp.startDate, exp.endDate);
               return (
-                <li key={index} className="bg-white shadow-md p-4 rounded-lg border-l-4 border-green-500" style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset" }}>
-                  <h4 className="text-lg font-bold">{exp.role}</h4>
-                  <p className="text-gray-700">{exp.company}</p>
-                  <p className="text-sm text-gray-500">{`${start} – ${end} (${duration})`}</p>
+                <li
+                  key={index}
+                  className="relative bg-white rounded-xl p-6 border-l-8 border-green-500 shadow-lg transition-transform transform hover:scale-[1.03] hover:shadow-xl cursor-pointer"
+                  style={{
+                    boxShadow:
+                      "0 10px 15px rgba(34, 197, 94, 0.2), inset 0 0 10px rgba(34, 197, 94, 0.1)",
+                  }}
+                >
+                  <h4 className="text-xl font-semibold text-green-800">{exp.role}</h4>
+                  <p className="text-gray-700 font-medium">{exp.company}</p>
+                  <p className="text-sm text-gray-500 mb-2">{`${start} – ${end} (${duration})`}</p>
                   {exp.current && (
-                    <span className="text-sm text-green-600 font-medium">
-                      Currently working here
+                    <span className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md select-none">
+                      Currently working
                     </span>
                   )}
                   {Array.isArray(exp.description) && (
-                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-700">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-3 text-sm">
                       {exp.description.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}
@@ -141,7 +169,7 @@ const Journey = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

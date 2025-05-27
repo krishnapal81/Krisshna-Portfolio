@@ -1,59 +1,123 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import img from "../../assets/kr2.png"
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import img from "../../assets/kr2.png";
+
 const Home = () => {
   const [text] = useTypewriter({
     words: ["👨‍💻 Frontend Developer", "📊 Data Engineer"],
-    loop: 0, // infinite loop
-    delaySpeed: 1000, // 3 seconds delay
+    loop: 0,
+    delaySpeed: 1500,
   });
 
   return (
-    <div className="flex min-h-screen font-['Poppins'] flex-col md:flex-row"  id="home">
-      {/* Left Content */}
-      <div className="relative flex flex-col justify-center bg-white w-full md:w-1/2 max-w-[720px]">
-        {/* Decorative Block */}
-        <div className="hidden md:block absolute inset-y-0 right-0 w-20 bg-gray-300 rotate-[15deg] translate-x-10 translate-y-10"></div>
+    <section
+      id="home"
+      className="min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-16 lg:px-24 bg-white font-['Poppins']"
+    >
+      {/* Left Section */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-6 py-12">
+        <p className="text-lg sm:text-xl text-gray-700 uppercase tracking-widest font-semibold">
+          Hello! This is{" "}
+          <span className="text-[#f59e0b] font-bold text-2xl sm:text-3xl md:text-4xl">
+            KRISHNA
+          </span>
+        </p>
 
-        {/* Text Content */}
-        <div className="relative px-8 sm:px-16 md:px-20 lg:px-24 xl:px-28 2xl:px-32 py-12 max-w-[700px]">
-          <p className="text-[18px] font-semibold tracking-widest text-[#b0b28a] uppercase mb-5">
-            Hello! This is{" "}
-                 <span className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#f59e0b]">
-                        KRISHNA </span>
-          </p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 flex flex-wrap gap-2 items-center justify-center">
+          <span>{text}</span>
+          <Cursor cursorStyle="|" />
+        </h1>
 
-          {/* Animated Heading */}
-          <div className="flex flex-wrap w-[510px] items-baseline gap-2 text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-6">
-            <span>{text}</span>
-            <Cursor cursorStyle="|" />
-          </div>
+        <div className="flex gap-4 flex-wrap justify-center">
+          <button
+            onClick={() => (window.location.href = "#contact")}
+            className="bg-[#f59e0b] hover:bg-[#d97706] transition-colors duration-300 text-white font-semibold rounded-md px-6 py-3 shadow-lg"
+          >
+            Hire Me
+          </button>
 
-          {/* Buttons Row */}
-          <div className="flex flex-wrap gap-4">
-            <button
-             onClick={() => window.location.href = "#contact"}
-             className="bg-[#b0b28a] text-white font-semibold rounded-md px-4 py-2 shadow-[0_10px_15px_-3px_rgba(176,178,138,0.3)] cursor-pointer">
-              Hire me
-            </button>
-            <a 
+          <a
             href="./krishn@.pdf"
-            className="border border-[#b0b28a] text-[#b0b28a] font-semibold rounded-md px-4 py-2 ">
-              Download CV
-            </a>
-          </div>
+            download
+            className="border-2 border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-white transition-all duration-300 font-semibold rounded-md px-6 py-3"
+          >
+            Download CV
+          </a>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center items-center gap-12 mt-10">
+          <a
+            href="https://github.com/krishnapal81"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="transition-transform duration-300 hover:scale-110"
+          >
+            <FaGithub style={{ color: "#171515" }} className="text-5xl" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/krishna-pal-78469b1b1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="transition-transform duration-300 hover:scale-110"
+          >
+            <FaLinkedin style={{ color: "#0A66C2" }} className="text-5xl" />
+          </a>
+
+          <a
+            href="https://wa.me/917379732360"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="transition-transform duration-300 hover:scale-110"
+          >
+            <FaWhatsapp style={{ color: "#25D366" }} className="text-5xl" />
+          </a>
         </div>
       </div>
 
-      {/* Right Image */}
-      <div className="w-full md:w-1/2 flex items-center justify-center md:justify-end mt-8 md:mt-0">
-        <img
+      {/* Right Section with Animated 3D Frame and Floating Image */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end py-10 relative">
+        {/* Glowing border shadow frame */}
+        <motion.div
+          className="absolute top-6 right-6 w-[70%] h-[90%] border-[10px] border-[#f59e0b] rounded-3xl rotate-3 z-0"
+          animate={{
+            boxShadow: [
+              "0 0 20px #f59e0b",
+              "0 0 40px #f59e0b80",
+              "0 0 60px #f59e0b50",
+              "0 0 80px #f59e0b30",
+            ],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        ></motion.div>
+
+        {/* Floating Image */}
+        <motion.img
           src={img}
-          alt="UI/UX Designer"
-          className="max-w-full h-auto object-cover md:max-h-[600px] mt-10 "
+          alt="Krishna profile"
+          className="relative z-10 w-[80%] sm:w-[60%] md:w-[70%] max-h-[500px] object-contain rounded-2xl shadow-2xl"
+          animate={{
+            y: [0, -15, 0], // float up and down
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

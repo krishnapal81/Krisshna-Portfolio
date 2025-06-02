@@ -19,8 +19,8 @@ const projects = [
       "A task management app with CRUD features, real-time notifications and user authentication.",
     image: img2,
     tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express.js"],
-    github: "https://github.com/krishnapal81/EmployeeTaskAssigner",
-    demo: "https://taskmanager.com",
+    github: "https://github.com/krishnapal81/TaskAssigner/tree/master",
+    demo: "https://taskassignerr.netlify.app/",
   },
   {
     title: "ToDo App",

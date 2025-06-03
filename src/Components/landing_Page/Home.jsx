@@ -39,7 +39,7 @@ const Home = () => {
           </button>
 
           <a
-            href="./krishn@.pdf"
+            href="./Krishna_Pal_Resume.pdf"
             download
             className="border-2 border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-white transition-all duration-300 font-semibold rounded-md px-6 py-3"
           >
